@@ -1,6 +1,11 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
+
+  /**
+   * Description: Program that uses for loops, if statements, and nested loops to form different interesting patterns in 8 different sections.
+   * @author: A. Chan
+   */
 	
 	
   /**
@@ -200,11 +205,11 @@ public class Sketch extends PApplet {
 
     int intX = 0;
     int intY = 0;
-    int counterRow = 0;
+    int intRowCounter = 0;
 
     for(int intColumn5 = 30; intColumn5 > 0; intColumn5--){
 
-      for(int intRow5 = 30; intRow5 > counterRow; intRow5--){
+      for(int intRow5 = 30; intRow5 > intRowCounter; intRow5--){
 
         intX = 3 - 10 + intRow5 * 300 / 30 ;
         intY = 3 + intColumn5 * 300 / 30;
@@ -214,7 +219,7 @@ public class Sketch extends PApplet {
         rect(intX, intY, 5, 5);
       }
 
-      counterRow ++;
+      intRowCounter ++;
     }
   
   }
@@ -223,11 +228,11 @@ public class Sketch extends PApplet {
 
     int intX = 0;
     int intY = 0;
-    int counterRow = 30;
+    int intRowCounter = 30;
 
     for(int intColumn6 = 30; intColumn6 > 0; intColumn6--){
 
-      for(int intRow6 = 0; intRow6 < counterRow; intRow6++){
+      for(int intRow6 = 0; intRow6 < intRowCounter; intRow6++){
 
         intX = 3 + 300 + intRow6 * 300 / 30;
         intY = 3 - 10 + intColumn6 * 300 / 30;
@@ -237,7 +242,7 @@ public class Sketch extends PApplet {
         rect(intX, intY, 5, 5);
       }
 
-      counterRow--;
+      intRowCounter--;
 
   }
 }
@@ -247,11 +252,11 @@ public class Sketch extends PApplet {
 
     int intX = 0;
     int intY = 0;
-    int counterColumn = 30;
+    int intColumnCounter = 30;
 
     for(int intRow7 = 0; intRow7 < 30; intRow7++) {
 
-      for(int intColumn7 = 0; intColumn7 < counterColumn; intColumn7++) {
+      for(int intColumn7 = 0; intColumn7 < intColumnCounter; intColumn7++) {
 
         intX = 3 + 600 + intRow7 * 300 / 30;
         intY = 3 + intColumn7 * 300 / 30;
@@ -262,12 +267,32 @@ public class Sketch extends PApplet {
 
       }
 
-      counterColumn--;
+      intColumnCounter--;
     }
 
   }
   
   public void draw_section8(){
+
+    int intX = 0;
+    int intY = 0;
+    int intColumnCounter = 30;
+
+    for(int intRow8 = 30; intRow8 > 0; intRow8--) {
+
+      for(int intColumn8 = 0; intColumn8 < intColumnCounter; intColumn8++) {
+
+        intX = 3 - 10 + 900 + intRow8 * 300 / 30;
+        intY = 3 + intColumn8 * 300 / 30;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+
+      intColumnCounter--;
+    }
 
   }
 
